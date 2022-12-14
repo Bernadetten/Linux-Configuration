@@ -13,3 +13,9 @@ vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost", "InsertEnter", "WinLeave"
     end,
     group = numbertoggle,
 })
+
+vim.api.nvim_create_autocmd({ "BufWrite" }, {
+    callback = function()
+        vim.cmd([[ !black  *.py]])
+    end,
+})
