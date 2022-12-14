@@ -101,6 +101,11 @@ _G.packer_plugins = {
     path = "/home/bernadetkw/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
     url = "https://github.com/EdenEast/nightfox.nvim"
   },
+  ["nvim-lspconfig"] = {
+    loaded = true,
+    path = "/home/bernadetkw/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
+  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/home/bernadetkw/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",

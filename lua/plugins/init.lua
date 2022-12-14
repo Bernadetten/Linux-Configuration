@@ -25,7 +25,7 @@ return require('packer').startup(function(use)
   -- My plugins here
   -- use 'foo1/bar1.nvim'
   -- use 'foo2/bar2.nvim'
-
+  use 'neovim/nvim-lspconfig'
 	use "EdenEast/nightfox.nvim" -- Theme
   use { -- File tree
   'nvim-tree/nvim-tree.lua',
@@ -35,19 +35,18 @@ return require('packer').startup(function(use)
   tag = 'nightly' -- optional, updated every week. (see issue #1193)
 }
 	use "tamton-aquib/duck.nvim"
-
+ 
   use { 
     'nvim-telescope/telescope.nvim', 
-    requires = {'nvim-lua/plenary.nvim' }
- }
+		requires = {'nvim-lua/plenary.nvim' }
+	}
  
   use {
     'numToStr/Comment.nvim',
       config = function()
         require('Comment').setup()
     end
- }
- 
+	}
   -- Syntax/Treesitter
   use({
     "nvim-treesitter/nvim-treesitter",
