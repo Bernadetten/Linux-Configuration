@@ -15,7 +15,8 @@ vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost", "InsertEnter", "WinLeave"
 })
 
 vim.api.nvim_create_autocmd({ "BufWrite" }, {
-    callback = function()
-        vim.cmd([[ !black  *.py]])
+    pattern = {"*.py"},
+		callback = function()
+			vim.cmd([[ !black  *.py]])
     end,
 })

@@ -4,10 +4,6 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
--- empty setup using defaults
-require("nvim-tree").setup()
-
--- OR setup with some options
 require("nvim-tree").setup({
   sort_by = "case_sensitive",
   view = {
@@ -16,8 +12,11 @@ require("nvim-tree").setup({
       list = {
         { key = "u", action = "dir_up" },
       },
-    },
-  },
+
+		},
+  	number = true,
+		relativenumber = true,
+	},
   renderer = {
     group_empty = true,
   },
