@@ -1,1 +1,1 @@
-This is the configuration file of nvim on the laptop Elephants
+This is the configuration file of nvim for the laptop Elephants
