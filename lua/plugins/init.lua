@@ -62,8 +62,8 @@ return require('packer').startup(function(use)
 	use('tamton-aquib/duck.nvim')
  
 	-- Telescope 
-  use({ 
-    'nvim-telescope/telescope.nvim', 
+  use({
+	  'nvim-telescope/telescope.nvim', 
 		requires = {'nvim-lua/plenary.nvim' }
 	})
  
@@ -85,7 +85,7 @@ return require('packer').startup(function(use)
   use('nvim-treesitter/nvim-treesitter-textobjects')
 	use('nvim-tree/nvim-web-devicons')
 
-	-- Tab bar
+	-- Navigation bar
   use({
 		'romgrk/barbar.nvim', 
 		wants = 'nvim-web-devicons'
@@ -94,6 +94,12 @@ return require('packer').startup(function(use)
   -- Indentation
 	use('lukas-reineke/indent-blankline.nvim')
 	
+	-- Status bar	
+	use {
+  	'nvim-lualine/lualine.nvim',
+  	requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+	}
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
   if packer_bootstrap then
