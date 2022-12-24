@@ -3,8 +3,10 @@ local options = {
   clipboard = "unnamedplus", -- use system clipboard
   spelllang = {"en"}, -- spell language
   wrap = true, -- wrap lines
-  hlsearch = true, -- highlights search
-  shiftwidth = 2, -- change tabsize to 2
+  hlsearch = false, -- highlights search
+  incsearch = true, -- highlights incremental search
+	colorcolumn = "80",
+	shiftwidth = 2, -- change tabsize to 2
   tabstop = 2, -- change tabsize to 2
 	mouse = '',
 }
