@@ -25,7 +25,13 @@ return require('packer').startup(function(use)
   
 	-- Theme
 	use('EdenEast/nightfox.nvim')
-  
+
+	-- Drawing diagrams, works, though before you use it, do :set ve=all
+	use('jbyuki/venn.nvim')
+
+	-- Integration with Google Keep
+	use {'stevearc/gkeep.nvim', run = ':UpdateRemotePlugins'}
+	
 	-- Mason/LSP/Linter
 	use({
   	'VonHeikemen/lsp-zero.nvim',
@@ -98,6 +104,55 @@ return require('packer').startup(function(use)
 	use {
   	'nvim-lualine/lualine.nvim',
   	requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+	}
+
+	-- Surrounding marks 
+	use({
+    "kylechui/nvim-surround",
+    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+    config = function()
+        require("nvim-surround").setup({
+            -- Configuration here, or leave empty to use defaults
+        })
+    end
+  })
+
+	-- Key mapping
+	use('mrjones2014/legendary.nvim')
+  use {
+    "folke/which-key.nvim",
+    config = function()
+      require("which-key").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+  }
+
+	-- Chiller searching through files 
+	use {
+		'kevinhwang91/nvim-hlslens',
+		config = function() 
+			require('hlslens').setup {
+		}
+		end
+	}
+
+	-- Shade out those screen we are not using
+	use {
+		'sunjon/shade.nvim',
+		config = function()
+			require('shade').setup {
+				overlay_opacity = 50,
+  			opacity_step = 1,
+  			keys = {
+    			brightness_up    = '<C-Up>',
+    			brightness_down  = '<C-Down>',
+    			toggle           = '<Leader>s',
+  		}
+		}
+		end
 	}
 
 	-- Automatically set up your configuration after cloning packer.nvim

@@ -8,6 +8,9 @@ keymap("n", "<Space>", "", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- Note taking -- LaTeX
+keymap('n', '<leader>oo', 'lua.require("nabla").popup()<CR>', term_opts)
+
 -- Disable arrow keys
 keymap("n", "<Up>", "<Nop>", opts)
 keymap("n", "<Down>", "<Nop>", opts)
@@ -112,7 +115,21 @@ keymap('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)
 -- :BarbarEnable - enables barbar (enabled by default)
 -- :BarbarDisable - very bad command, should never be used
 
--- Telescope
+-- Improved searchingkeymap
+keymap('n', 'n',
+    [[<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>]],
+    opts)
+vim.api.nvim_set_keymap('n', 'N',
+    [[<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>]],
+    opts)
+keymap('n', '*', [[*<Cmd>lua require('hlslens').start()<CR>]], opts)
+keymap('n', '#', [[#<Cmd>lua require('hlslens').start()<CR>]], opts)
+keymap('n', 'g*', [[g*<Cmd>lua require('hlslens').start()<CR>]], opts)
+keymap('n', 'g#', [[g#<Cmd>lua require('hlslens').start()<CR>]], opts)
+
+keymap('n', '<Leader>l', '<Cmd>noh<CR>', opts)
+
+-- telescope
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
