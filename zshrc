@@ -1,4 +1,4 @@
- #I know that one  If you come from bash you might have to change your $PATH.
+# If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
@@ -78,9 +78,9 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # Named dir 
-hash -d os3=~/Documents/OS3/
-hash -d an=~/Documents/OS3/AN/
-hash -d ccf=~/Documents/OS3/CCF
+# hash -d os3=~/Documents/OS3/
+# hash -d an=~/Documents/OS3/AN/
+# hash -d ccf=~/Documents/OS3/CCF
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
