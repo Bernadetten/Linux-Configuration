@@ -71,7 +71,7 @@ zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # For later: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/jump
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions common-aliases command-not-found colored-man-pages colorize zsh-interactive-cd zsh-navigation-tools ufw timer thefuck safe-paste man)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions common-aliases command-not-found colored-man-pages colorize zsh-interactive-cd zsh-navigation-tools ufw timer safe-paste man)
 
 source $ZSH/oh-my-zsh.sh
 
